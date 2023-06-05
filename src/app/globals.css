@@ -11,13 +11,17 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .tabs {
   display: flex;
   justify-content: space-around;
   list-style: none;
-  padding: 0;
+  padding: 10;
 }
 
 .tab {

@@ -9,7 +9,10 @@ export default function Hours(){
                 <Link href="/order" className="styles.a">Online Order/Locations</Link>
                 <Link href="/hours" className="a">Business Hours </Link>  
             </div>
-            <p className = "homeText">hours</p>
+            <div className = "styles.hours">
+                
+            </div>
+            
         </div>
     )
 }
