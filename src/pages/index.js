@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from '../../src/styles/home.module.css'
+import styles from '../styles/home.module.css'
 
 import Image from 'next/image'
 
@@ -19,7 +19,9 @@ export default function Home(){
                 <Image
                     src = "/images/hamburgCurry.jpg"
                     alt='Hamburg Curry'
-                    style = {image}
+                    width = {800}
+                    height = {450}
+                    layout = "responsive"
                 />
             </div>
         </div>
