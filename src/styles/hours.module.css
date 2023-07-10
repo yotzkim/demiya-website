@@ -1,56 +1,11 @@
-.tabs{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    list-style: none;
-    padding: 0;
-    margin-top: 4%;
-    }
-  
-    .tabs a:not(:last-child){
-    margin-right: 9vw;
-    }
-    
-    @media (max-width: 600px){
-      .tabs a{
-        font-size: 0.8rem;
-      }
-    }
-  
-  
-  .a {
-      text-decoration: none;
-      font-size: large;
-      font-family: 'Abel';
-      box-shadow: inset 0 0 0 0 #a42407;
-      color: #787878;
-      margin: 0 -.20rem;
-      padding: 0 .25rem;
-      transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
-    }
-    .tabs a:hover {
-      box-shadow: inset 100vw 0 0 0 #a42407;
-      color: white;
-    }
-    @media (min-width: 768px){
-      .a{
-        font-size: x-large;
-      }
-    }
-
 .hoursText {
-    font-size: medium;
-    text-align: center;
+    font-size: x-small;
     font-family: "Abel";
     color: rgb(69, 67, 67);
     margin-top: 5%;
+    width: 60%;
     }
     
-@media (min-width: 768px){
-    .homeText{
-    font-size: large;
-      }
-    }
 
 .dayTimeContainer{
     display: flex;
@@ -60,7 +15,7 @@
 
 .day{
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     margin-bottom: 5vh;
 }
@@ -78,4 +33,26 @@
 .time p{
     margin: 0;
     padding-left: 1.5vw;
+}
+
+.image{
+  margin-top: 12%;
+  padding-right: 20%;
+  width: 30%;
+  
+}
+
+.content{
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+@media(min-width: 768px){
+  .dayLabel{
+    font-size: large;
+  }
+  .time p{
+    font-size: large;
+  }
 }

@@ -1,0 +1,41 @@
+.container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.orderText {
+    padding-top: 6vh;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    font-family: 'Abel';
+    font-size: small;
+}
+
+.orderText link{
+    flex: 1;
+    text-align: center;
+}
+
+.location{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 2.5vw;
+}
+
+.mapContainer iframe{
+  width: 30vw;
+  height: 25vh;
+}
+
+@media(min-width: 768px){
+  .orderText{
+      font-size: large;
+  }
+}
+
+        
