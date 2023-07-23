@@ -6,10 +6,12 @@
     margin-top: 5%;
 }
 
+.imageContainer{
+  display: flex;
+  justify-content: center;
+}
+
 .instagramLink{
-  font-size: medium;
-  text-align: center;
-  font-family: "Abel";
   color: rgb(69, 67, 67);
   text-decoration: underline;
   margin-top: 5%;
@@ -17,16 +19,6 @@
   .instagramLink:hover{
     color:#a42407
   }
-
-.image{
-  display: block;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  margin-left: 14%;
-  width: 75%;
-  height: 0%;
-}
 
 @media (min-width: 768px){
   .homeText{

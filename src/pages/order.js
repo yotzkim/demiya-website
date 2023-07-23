@@ -28,7 +28,7 @@ export default function Order() {
   ];
 
   return (
-    <Layout>{
+    <Layout>
       <div className={styles.orderText}>
         {locations.map((location) => (
           <div key={location.address} className={styles.location}>
@@ -44,8 +44,9 @@ export default function Order() {
             </div>
           </div>
         ))}
+      <div className = {styles.contact}>Customer Support: Only text messages are available at <strong>650-833-8775</strong></div>
       </div>
-    }</Layout>
+    </Layout>
   );
 }
 

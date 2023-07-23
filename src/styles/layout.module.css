@@ -1,4 +1,5 @@
 .tabs{
+    font-size: medium;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -11,9 +12,9 @@
     margin-right: 9vw;
     }
     
-    @media (max-width: 600px){
+    @media (min-width: 768px){
       .tabs a{
-        font-size: 0.8rem;
+        font-size: x-large;
       }
     }
   
