@@ -14,7 +14,7 @@ export default function Order() {
         name: 'De Anza/Cupertino Location',
         address: '1145 S De Anza Blvd, San Jose, CA 95129',
         mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=1145+S+De+Anza+Blvd+%2C+San+Jose%2C+CA+95129`,
-        orderLink: 'https://www.clover.com/online-ordering/demiya-de-anza'
+        orderLink: 'https://demiyainc.square.site/'
       },
       {
         name: 'Dublin Location (Currently only in-person orders)',
