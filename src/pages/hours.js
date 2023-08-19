@@ -8,8 +8,8 @@ export default function Hours(){
         { day: 'Tuesday', hours: {dayTime: '11:30am - 1:00pm', nightTime: '5:30pm - 8:00pm'}},
         { day: 'Wednesday', hours: {dayTime: '11:30am - 1:00pm'}},
         { day: 'Thursday', hours: {dayTime: '11:30am - 1:00pm', nightTime: '5:30pm - 8:00pm'}},
-        { day: 'Friday', hours: {dayTime: '11:30am - 1:00pm', nightTime: '5:30pm - 8:00pm'}},
-        { day: 'Saturday', hours: {dayTime: '11:30am - 1:30pm', nightTime: '5:30pm - 8:00pm'}},
+        { day: 'Friday', hours: {dayTime: '11:30am - 1:00pm', nightTime: '5:30pm - 8:30pm'}},
+        { day: 'Saturday', hours: {dayTime: '11:30am - 1:30pm', nightTime: '5:30pm - 8:30pm'}},
         { day: 'Sunday', hours: {dayTime: '11:30am - 1:30pm', nightTime: '5:30pm - 7:30pm'}}
     ]
 
