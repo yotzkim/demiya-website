@@ -17,10 +17,10 @@ export default function Order() {
         orderLink: 'https://demiyainc.square.site/'
       },
       {
-        name: 'Dublin Location (Currently only in-person orders)',
+        name: 'Dublin Location (Online orders now available)',
         address: '7477 Village Pkwy, Dublin, CA 94568',
         mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=7477+Village+Pkwy+%2C+Dublin+%2C+CA+94568`,
-        orderLink: ''
+        orderLink: 'https://demiyainc.square.site/'
       },
   
   
