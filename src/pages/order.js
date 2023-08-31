@@ -5,13 +5,13 @@ import Layout from '../components/layout'
 export default function Order() {
   const locations = [
     {
-      name: 'Saratoga Location',
+      name: 'Saratoga Online Order',
       address: '375 Saratoga Ave G, San Jose, CA 95129',
       mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=375+Saratoga+Ave+G%2C+San+Jose%2C+CA+95129`,
       orderLink: 'https://www.clover.com/online-ordering/demiya-saratoga'
     },
     {
-        name: 'De Anza/Cupertino Location',
+        name: 'De Anza/Cupertino Online Order',
         address: '1145 S De Anza Blvd, San Jose, CA 95129',
         mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=1145+S+De+Anza+Blvd+%2C+San+Jose%2C+CA+95129`,
         orderLink: 'https://demiyainc.square.site/'
