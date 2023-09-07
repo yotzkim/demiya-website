@@ -8,7 +8,7 @@ export default function Order() {
       name: 'Saratoga Online Order',
       address: '375 Saratoga Ave G, San Jose, CA 95129',
       mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=375+Saratoga+Ave+G%2C+San+Jose%2C+CA+95129`,
-      orderLink: 'https://www.clover.com/online-ordering/demiya-saratoga'
+      orderLink: 'https://demiyainc.square.site/'
     },
     {
         name: 'De Anza/Cupertino Online Order',
