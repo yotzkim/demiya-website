@@ -8,19 +8,19 @@ export default function Order() {
       name: 'Saratoga Online Order',
       address: '375 Saratoga Ave G, San Jose, CA 95129',
       mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=375+Saratoga+Ave+G%2C+San+Jose%2C+CA+95129`,
-      orderLink: 'https://demiyainc.square.site/'
+      orderLink: 'https://demiyainc.square.site/?location=11ee09b720ff009293a3ac1f6bbba828&customer_seat_id=11ee5cca1196d886ae73d230f2d6098d'
     },
     {
         name: 'De Anza/Cupertino Online Order',
         address: '1145 S De Anza Blvd, San Jose, CA 95129',
         mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=1145+S+De+Anza+Blvd+%2C+San+Jose%2C+CA+95129`,
-        orderLink: 'https://demiyainc.square.site/'
+        orderLink: 'https://demiyainc.square.site/?location=11ee09b7202ff20393a3ac1f6bbba828&customer_seat_id=11ee3cb9a5c1c9fca9dade2627b4fc9e'
       },
       {
         name: 'Dublin Location (Online orders now available)',
         address: '7477 Village Pkwy, Dublin, CA 94568',
         mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=7477+Village+Pkwy+%2C+Dublin+%2C+CA+94568`,
-        orderLink: 'https://demiyainc.square.site/'
+        orderLink: 'https://demiyainc.square.site/?location=11ee09b71fbfbab993a3ac1f6bbba828&customer_seat_id=11ee0bbf4a379d6cbbfe56e914396b31'
       },
   
   
