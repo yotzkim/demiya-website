@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Layout from '../components/layout'
 
 export default function Hours(){
-    const businessHours = [
+    const saratogaHours = [
         { day: 'Monday', hours: {dayTime: 'Closed'}},
         { day: 'Tuesday', hours: {dayTime: '11:30am - 1:00pm', nightTime: '5:30pm - 8:00pm'}},
         { day: 'Wednesday', hours: {dayTime: '11:30am - 1:00pm'}},
@@ -11,6 +11,16 @@ export default function Hours(){
         { day: 'Friday', hours: {dayTime: '11:30am - 1:00pm', nightTime: '5:30pm - 8:30pm'}},
         { day: 'Saturday', hours: {dayTime: '11:30am - 1:30pm', nightTime: '5:30pm - 8:30pm'}},
         { day: 'Sunday', hours: {dayTime: '11:30am - 1:30pm', nightTime: '5:30pm - 7:30pm'}}
+    ]
+
+    const deAnzaHours = [
+        { day: 'Monday', hours: {dayTime: 'Closed'}},
+        { day: 'Tuesday', hours: {dayTime: '11:30am - 1:00pm', nightTime: '5:30pm - 8:00pm'}},
+        { day: 'Wednesday', hours: {dayTime: '11:30am - 1:00pm'}},
+        { day: 'Thursday', hours: {dayTime: '11:30am - 1:00pm', nightTime: '5:30pm - 8:00pm'}},
+        { day: 'Friday', hours: {dayTime: '11:30am - 1:00pm', nightTime: '5:30pm - 8:30pm'}},
+        { day: 'Saturday', hours: {dayTime: '8:00am - 1:30pm', nightTime: '5:30pm - 8:30pm'}},
+        { day: 'Sunday', hours: {dayTime: '8:00am - 1:30pm', nightTime: '5:30pm - 7:30pm'}}
     ]
 
     const dublinHours = [
@@ -26,9 +36,22 @@ export default function Hours(){
         <Layout>
             <div className = {styles.hoursContainer}>
 
-                <div className = {styles.businessHours}>
-                    <h2 className = {styles.hoursHeading}>De Anza / Saratoga Hours:</h2>
-                    {businessHours.map((item) => (
+                <div className = {styles.saratogaHours}>
+                    <h2 className = {styles.hoursHeading}>Saratoga Hours</h2>
+                    {saratogaHours.map((item) => (
+                        <div className = {styles.day} key = {item.day}>
+                            <div className = {styles.dayLabel}>{item.day}:</div>
+                            <div className = {styles.time}>
+                                <p>{item.hours.dayTime}</p>
+                                <p>{item.hours.nightTime}</p>
+                            </div>
+                        </div>
+                     ))}
+                </div>
+
+                <div className = {styles.deAnzaHours}>
+                    <h2 className = {styles.hoursHeading}>De Anza Hours<br /> (Breakfast on Sat/Sun!) </h2>
+                    {deAnzaHours.map((item) => (
                         <div className = {styles.day} key = {item.day}>
                             <div className = {styles.dayLabel}>{item.day}:</div>
                             <div className = {styles.time}>
@@ -40,7 +63,7 @@ export default function Hours(){
                 </div>
 
                 <div className={styles.dublinHours}>
-                    <h2 className = {styles.hoursHeading}>Dublin Hours:</h2>
+                    <h2 className = {styles.hoursHeading}>Dublin Hours</h2>
                     {dublinHours.map(item => (
                         <div className={styles.day} key={item.day}>
                             <div className={styles.dayLabel}>{item.day}:</div>
@@ -52,6 +75,9 @@ export default function Hours(){
 
                         </div>
                     ))}
+
+
+
                     <Image
                         src = "/images/eggcurry_.jpeg"
                         alt='Egg Curry'
@@ -59,6 +85,9 @@ export default function Hours(){
                         height = {300}
                         style = {{width: '50%', height: 'auto'}}
                     />
+
+
+
                 </div>
 
             </div>

@@ -5,18 +5,15 @@
       font-family: "Abel";
       margin-top: 4%;
       display: grid;
-      grid-template-columns: 45% 20% 45%;
-      width: 70%;
-      padding-left: 12.5%;
+      grid-template-columns: 33.33% 33.33% 33.33%;
+      gap: 10%;
+      width: 80%;
+      padding-left: 6%;
   }
+
   
-  .businessHours {
-      grid-column: 1;
-  }
   
-  .dublinHours {
-      grid-column: 3;
-  }
+
   
   .day {
       display: flex;
