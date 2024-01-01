@@ -19,18 +19,18 @@ export default function Hours(){
         { day: 'Wednesday', hours: {dayTime: '11:30am - 1:00pm'}},
         { day: 'Thursday', hours: {dayTime: '11:30am - 1:00pm', nightTime: '5:30pm - 8:00pm'}},
         { day: 'Friday', hours: {dayTime: '11:30am - 1:00pm', nightTime: '5:30pm - 8:30pm'}},
-        { day: 'Saturday', hours: {dayTime: '8:00am - 1:30pm', nightTime: '5:30pm - 8:30pm'}},
-        { day: 'Sunday', hours: {dayTime: '8:00am - 1:30pm', nightTime: '5:30pm - 7:30pm'}}
+        { day: 'Saturday', hours: {dayTime: '9:00am - 1:30pm', nightTime: '5:30pm - 8:30pm'}},
+        { day: 'Sunday', hours: {dayTime: '9:00am - 1:30pm', nightTime: '5:30pm - 7:30pm'}}
     ]
 
     const dublinHours = [
-        { day: 'Monday', hours: 'Closed'},
-        { day: 'Tuesday', hours: '11:30am - 8:00pm'},
-        { day: 'Wednesday', hours: 'Closed',},
-        { day: 'Thursday', hours: '11:30am - 8:00pm'},
-        { day: 'Friday', hours: '11:30am - 8:00pm'},
-        { day: 'Saturday', hours: '11:30am - 8:00pm'},
-        { day: 'Sunday', hours: '11:30am - 7:30pm'}
+        { day: 'Monday', hours: {dayTime: 'Closed'}},
+        { day: 'Tuesday', hours: {dayTime: '11:30am - 3:00pm', nightTime: '5:00pm - 8:00pm'}},
+        { day: 'Wednesday', hours: {dayTime: 'Closed'}},
+        { day: 'Thursday', hours: {dayTime: '11:30am - 3:00pm', nightTime: '5:00pm - 8:00pm'}},
+        { day: 'Friday', hours: {dayTime: '11:30am - 3:00pm', nightTime: '5:00pm - 8:00pm'}},
+        { day: 'Saturday', hours: {dayTime: '11:30am - 8:00pm'}},
+        { day: 'Sunday', hours: {dayTime: '11:30am - 7:30pm'}}
     ]
     return(
         <Layout>
@@ -67,10 +67,9 @@ export default function Hours(){
                     {dublinHours.map(item => (
                         <div className={styles.day} key={item.day}>
                             <div className={styles.dayLabel}>{item.day}:</div>
-                            <div className={styles.time}>
-                                {item.hours.split(',').map((hour, index) => (
-                                    <p key={index}>{hour}</p>
-                                 ))}
+                            <div className = {styles.time}>
+                                <p>{item.hours.dayTime}</p>
+                                <p>{item.hours.nightTime}</p>
                             </div>
 
                         </div>

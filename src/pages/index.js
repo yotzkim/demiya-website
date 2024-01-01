@@ -9,7 +9,7 @@ export default function Home(){
         <Layout>
             <div className = {styles.container}>
                 <div className = {styles.homeText}>
-                    <span>The most up-to-date information is available only on Instagram (not Yelp) at </span>
+                    <span>The most up-to-date information is available on Instagram at </span>
                     <Link className = {styles.instagramLink} href="https://www.instagram.com/demiya_inc/">demiya_inc</Link> 
                 </div>
                 <div className = {styles.imageContainer}>
