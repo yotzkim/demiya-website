@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
       {children}
       <footer className={styles.footer}>
         <p className={styles.copyright}>
-          &copy; Copyright 2016-2023 Demiya Inc.
+          &copy; Copyright 2016-2024 Demiya Inc.
         </p>
       </footer>
     </div>
