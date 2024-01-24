@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import styles from '../../src/styles/orders.module.css';
 import Layout from '../components/layout'
+import Head from 'next/head';
 
 export default function Order() {
   const locations = [
@@ -29,6 +30,12 @@ export default function Order() {
 
   return (
     <Layout>
+      <Head>
+        <title>Demiya Online Order</title>
+        <meta name="description" content="Official website for Demiya restaurant. Order online here!"></meta>
+        <meta name="keywords" content="Demiya, Japanese Restaurant, Japanese Curry, Katsu, Cupertino, Dublin, San Jose, Saratoga"></meta>
+        <link rel="icon" href="/images/demiyalogo1.jpg"></link>
+      </Head>
       <div className={styles.orderText}>
         {locations.map((location) => (
           <div key={location.address} className={styles.location}>

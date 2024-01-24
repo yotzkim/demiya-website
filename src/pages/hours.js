@@ -1,6 +1,7 @@
 import styles from '../../src/styles/hours.module.css'
 import Image from 'next/image'
 import Layout from '../components/layout'
+import Head from 'next/head'
 
 export default function Hours(){
     const saratogaHours = [
@@ -34,8 +35,13 @@ export default function Hours(){
     ]
     return(
         <Layout>
+            <Head>
+                <title>Demiya Hours</title>
+                <meta name="description" content="Official website for Demiya restaurant. Check hours here!"></meta>
+                <meta name="keywords" content="Demiya, Japanese Restaurant, Japanese Curry, Katsu, Cupertino, Dublin, San Jose, Saratoga"></meta>
+                <link rel="icon" href="/images/demiyalogo1.jpg"></link>
+            </Head>
             <div className = {styles.hoursContainer}>
-
                 <div className = {styles.saratogaHours}>
                     <h2 className = {styles.hoursHeading}>Saratoga Hours</h2>
                     {saratogaHours.map((item) => (
