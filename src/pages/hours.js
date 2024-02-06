@@ -26,12 +26,12 @@ export default function Hours(){
 
     const dublinHours = [
         { day: 'Monday', hours: {dayTime: 'Closed'}},
-        { day: 'Tuesday', hours: {dayTime: '11:30am - 3:00pm', nightTime: '5:00pm - 8:00pm'}},
+        { day: 'Tuesday', hours: {dayTime: '11:45am - 2:30pm', nightTime: '5:00pm - 8:00pm'}},
         { day: 'Wednesday', hours: {dayTime: 'Closed'}},
-        { day: 'Thursday', hours: {dayTime: '11:30am - 3:00pm', nightTime: '5:00pm - 8:00pm'}},
-        { day: 'Friday', hours: {dayTime: '11:30am - 3:00pm', nightTime: '5:00pm - 8:00pm'}},
-        { day: 'Saturday', hours: {dayTime: '11:30am - 8:00pm'}},
-        { day: 'Sunday', hours: {dayTime: '11:30am - 7:30pm'}}
+        { day: 'Thursday', hours: {dayTime: '11:45am - 2:30pm', nightTime: '5:00pm - 8:00pm'}},
+        { day: 'Friday', hours: {dayTime: '11:45am - 2:30pm', nightTime: '5:00pm - 8:00pm'}},
+        { day: 'Saturday', hours: {dayTime: '11:45am - 3:00pm', nightTime: '5:00pm-8:00pm'}},
+        { day: 'Sunday', hours: {dayTime: '11:45am - 3:00pm', nightTime: '5:00pm - 7:30pm'}}
     ]
     return(
         <Layout>
