@@ -11,7 +11,7 @@ export default function Home(){
                 <title>Demiya Website</title>
                 <meta name="description" content="Official website for Demiya restaurant. Order online and check hours here!"></meta>
                 <meta name="keywords" content="Demiya, Japanese Restaurant, Japanese Curry, Katsu, Cupertino, Dublin, San Jose, Saratoga"></meta>
-                <link rel="icon" href="/images/demiyalogo1.jpg"></link>
+                <link rel="icon" href="/images/logo.jpeg"></link>
             </Head>
             <div className = {styles.container}>
                 <div className = {styles.homeText}>

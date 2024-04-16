@@ -1,49 +1,47 @@
-.container{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .orderText {
-    padding-top: 6vh;
-    display: flex;
-    justify-content: space-between;
-    width: 70%;
-    font-family: 'Abel';
-    font-size: small;
+  padding-top: 6vh;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  font-family: "Abel";
+  font-size: small;
 }
 
-.orderText link{
-    flex: 1;
-    text-align: center;
+.orderText link {
+  flex: 1;
+  text-align: center;
 }
 
-.location{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 2.5vw;
+.location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 2vw;
+  text-align: center;
 }
 
-.mapContainer iframe{
-  width: 30vw;
+.mapContainer iframe {
+  width: 21.8vw;
   height: 25vh;
 }
 
 .contact {
-    text-align: center;
-    position: absolute;
-    bottom: 35vh;
-    width: 100%;
-  }
-  
-
-@media(min-width: 768px){
-  .orderText{
-      font-size: large;
-  }
+  text-align: center;
+  position: absolute;
+  bottom: 30vh;
+  width: 100%;
 }
 
-        
+
+@media (min-width: 768px) {
+  .orderText {
+    font-size: large;
+  }
+}
