@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "../../src/styles/orders.module.css";
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 import Head from "next/head";
 
 export default function Order() {

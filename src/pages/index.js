@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styles from '../styles/home.module.css'
 import Image from 'next/image'
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 import Head from 'next/head';
 
 export default function Home(){

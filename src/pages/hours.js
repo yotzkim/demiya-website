@@ -1,6 +1,6 @@
 import styles from "../../src/styles/hours.module.css";
 import Image from "next/image";
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 import Head from "next/head";
 
 export default function Hours() {
