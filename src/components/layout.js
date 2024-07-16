@@ -5,9 +5,8 @@ import styles from '../../src/styles/layout.module.css';
 const Layout = ({ children }) => {
   return (
     <div className={styles.container}>
-      <div className={styles.newLocation}>
-        <p>Fremont Location Coming soon!</p>
-      </div>
+        <p className={styles.newLocation}> Fremont Location Coming soon!</p>
+        <p className={styles.dublin}>Dublin location now open on Wednesdays!</p>
       <div className={styles.tabs}>
         <Link href="/" className={styles.a}>Home</Link>
         <Link href="/order" className={styles.a}>Online Order/Locations</Link>

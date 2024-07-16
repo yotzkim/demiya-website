@@ -1,6 +1,6 @@
 import styles from "../../src/styles/hours.module.css";
 import Image from "next/image";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import Head from "next/head";
 
 export default function Hours() {
@@ -60,7 +60,7 @@ export default function Hours() {
       day: "Tuesday",
       hours: { dayTime: "11:30am - 2:30pm", nightTime: "5:00pm - 8:00pm" },
     },
-    { day: "Wednesday", hours: { dayTime: "Closed" } },
+    { day: "Wednesday", hours: { dayTime: "11:30am - 2:30pm", nightTime: "5:00pm - 8:00pm" }},
     {
       day: "Thursday",
       hours: { dayTime: "11:30am - 2:30pm", nightTime: "5:00pm - 8:00pm" },

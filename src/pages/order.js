@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "../../src/styles/orders.module.css";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import Head from "next/head";
 
 export default function Order() {
@@ -26,15 +26,15 @@ export default function Order() {
       orderLink:
         "https://demiyainc.square.site/?location=11ee09b71fbfbab993a3ac1f6bbba828&customer_seat_id=11ee0bbf4a379d6cbbfe56e914396b31",
     },
-    // {
-    //   name: "FREMONT",
-    //   address: "46551 Mission Blvd, Fremont, CA 94539",
-    //   mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=46551+Mission+Blvd+%2C+Fremont+%2C+CA+94539`,
-    //   orderLink: "",
-    // },
+    {
+      name: "FREMONT",
+      address: "46551 Mission Blvd, Fremont, CA 94539 (inside Ranch 99)",
+      mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=46551+Mission+Blvd+%2C+Fremont+%2C+CA+94539`,
+      orderLink: "",
+    },
   ];
 
-    return (
+  return (
     <Layout>
       <Head>
         <title>Demiya Online Order</title>
@@ -52,8 +52,11 @@ export default function Order() {
         {locations.map((location) => (
           <div key={location.address} className={styles.location}>
             <p>{location.name}</p>
-
+            {location.name === "FREMONT" ? (
+              <p className={styles.fremont}>Online order available soon</p>
+            ) : (
               <Link href={location.orderLink}>Online order</Link>
+            )}
             <p>{location.address}</p>
             <div className={styles.mapContainer}>
               <iframe
@@ -65,48 +68,12 @@ export default function Order() {
             </div>
           </div>
         ))}
-        <div className={styles.contact}>
-          Customer Support: Only text messages are available at{" "}
-          <strong>650-833-8775</strong>
-        </div>
       </div>
+      <div className={styles.contact}>
+        Customer Support: Only text messages are available at{" "}
+        <strong>650-833-8775</strong>
+      </div>
+      <div className={styles.spacer}></div>
     </Layout>
   );
 }
-//   return (
-//     <Layout>
-//       <Head>
-//         <title>Demiya Online Order</title>
-//         <meta
-//           name="description"
-//           content="Official website for Demiya restaurant. Order online here!"
-//         ></meta>
-//         <meta
-//           name="keywords"
-//           content="Demiya, Japanese Restaurant, Japanese Curry, Katsu, Cupertino, Dublin, San Jose, Saratoga"
-//         ></meta>
-//         <link rel="icon" href="/images/logo.jpeg"></link>
-//       </Head>
-//       <div className={styles.orderText}>
-//         {locations.map((location) => (
-//           <div key={location.address} className={styles.location}>
-//             <Link href={location.orderLink}>{location.name}</Link>
-//             <p>{location.address}</p>
-//             <div className={styles.mapContainer}>
-//               <iframe
-//                 src={location.mapSrc}
-//                 frameBorder="0"
-//                 allowFullScreen
-//                 title={location.name}
-//               ></iframe>
-//             </div>
-//           </div>
-//         ))}
-//         <div className={styles.contact}>
-//           Customer Support: Only text messages are available at{" "}
-//           <strong>650-833-8775</strong>
-//         </div>
-//       </div>
-//     </Layout>
-//   );
-// }
