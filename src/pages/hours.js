@@ -109,7 +109,6 @@ export default function Hours() {
         <div className={styles.deAnzaHours}>
           <h2 className={styles.hoursHeading}>
             De Anza Hours
-            <br /> (Breakfast on Sat/Sun!){" "}
           </h2>
           {deAnzaHours.map((item) => (
             <div className={styles.day} key={item.day}>

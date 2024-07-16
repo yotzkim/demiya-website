@@ -53,7 +53,7 @@ export default function Order() {
           <div key={location.address} className={styles.location}>
             <p>{location.name}</p>
             {location.name === "FREMONT" ? (
-              <p className={styles.fremont}>Online order available soon</p>
+              <p className={styles.fremont}>Coming soon!</p>
             ) : (
               <Link href={location.orderLink}>Online order</Link>
             )}
