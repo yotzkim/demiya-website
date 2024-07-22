@@ -10,7 +10,7 @@ export default function Hours() {
       day: "Tuesday",
       hours: { dayTime: "11:30am - 1:00pm", nightTime: "5:30pm - 8:00pm" },
     },
-    { day: "Wednesday", hours: { dayTime: "11:30am - 1:00pm" } },
+    { day: "Wednesday", hours: { dayTime: "11:30am - 1:00pm" , nightTime: "5:30pm - 8:00pm" }},
     {
       day: "Thursday",
       hours: { dayTime: "11:30am - 1:00pm", nightTime: "5:30pm - 8:00pm" },
@@ -35,7 +35,7 @@ export default function Hours() {
       day: "Tuesday",
       hours: { dayTime: "11:30am - 1:00pm", nightTime: "5:30pm - 8:00pm" },
     },
-    { day: "Wednesday", hours: { dayTime: "11:30am - 1:00pm" } },
+    { day: "Wednesday", hours: { dayTime: "11:30am - 1:00pm" , nightTime: "5:30pm - 8:00pm" }},
     {
       day: "Thursday",
       hours: { dayTime: "11:30am - 1:00pm", nightTime: "5:30pm - 8:00pm" },
@@ -60,7 +60,7 @@ export default function Hours() {
       day: "Tuesday",
       hours: { dayTime: "11:30am - 2:30pm", nightTime: "5:00pm - 8:00pm" },
     },
-    { day: "Wednesday", hours: { dayTime: "11:30am - 2:30pm", nightTime: "5:00pm - 8:00pm" }},
+    { day: "Wednesday",  hours: { dayTime: "11:30am - 2:30pm", nightTime: "5:00pm - 8:00pm" }},
     {
       day: "Thursday",
       hours: { dayTime: "11:30am - 2:30pm", nightTime: "5:00pm - 8:00pm" },
