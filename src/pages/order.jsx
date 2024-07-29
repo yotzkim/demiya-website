@@ -1,12 +1,12 @@
 import Link from "next/link";
 import styles from "../../src/styles/orders.module.css";
-import Layout from "../components/layout";
+import Layout from "../components/layout.jsx";
 import Head from "next/head";
 
 export default function Order() {
   const locations = [
     {
-      name: "SARATOGA",
+      name: "SARATOGA AVE",
       address: "375 Saratoga Ave G, San Jose, CA 95129",
       mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=375+Saratoga+Ave+G%2C+San+Jose%2C+CA+95129`,
       orderLink:
@@ -28,9 +28,9 @@ export default function Order() {
     },
     {
       name: "FREMONT",
-      address: "46551 Mission Blvd, Fremont, CA 94539 (inside Ranch 99)",
+      address: "46551 Mission Blvd, Fremont, CA 94539 (inside 99 Ranch)",
       mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=46551+Mission+Blvd+%2C+Fremont+%2C+CA+94539`,
-      orderLink: "",
+      orderLink: "https://order.toasttab.com/online/demiya-fremont-em-46551-mission-boulevard",
     },
   ];
 
@@ -51,12 +51,8 @@ export default function Order() {
       <div className={styles.orderText}>
         {locations.map((location) => (
           <div key={location.address} className={styles.location}>
-            <p>{location.name}</p>
-            {location.name === "FREMONT" ? (
-              <p className={styles.fremont}>Coming soon!</p>
-            ) : (
+            <p className={styles.locationName}>{location.name}</p>
               <Link href={location.orderLink}>Online order</Link>
-            )}
             <p>{location.address}</p>
             <div className={styles.mapContainer}>
               <iframe

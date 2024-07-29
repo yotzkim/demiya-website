@@ -8,8 +8,7 @@
   padding-top: 6vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  font-family: "Abel";
+  gap: 3.5rem;
   font-size: small;
 }
 
@@ -29,18 +28,26 @@
 
 .contact {
   text-align: center;
-  font-family: "Abel";
-  margin-top: 3vh;
+  margin-top: 7vh;
+  font-size: medium;
 }
 
+.locationName{
+  font-weight: bold;
+}
+
+.spacer {
+  margin-top: 10vh;
+}
 
 @media (min-width: 768px) {
   .orderText {
     font-size: large;
   }
+  .contact{
+    font-size: large;
+  }
 }
 
-.spacer {
-  margin-top: 8vh;
-}
+
 

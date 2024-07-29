@@ -1,33 +1,76 @@
-.homeText {
-    font-size: medium;
-    text-align: center;
-    font-family: "Abel";
-    color: rgb(69, 67, 67);
-    margin-top: 5%;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
-.imageContainer{
+.announcementsBox {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 80%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.announcementsHeading {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.announcementList {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.announcementItem {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.homeText {
+  font-size: medium;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.imageContainer {
   display: flex;
   justify-content: center;
 }
 
-.instagramLink{
-  color: rgb(69, 67, 67);
+.instagramLink {
+  color: #3b3b3b;
   text-decoration: underline;
   margin-top: 5%;
-  }
-  .instagramLink:hover{
-    color:#a42407
-  }
-
-@media (min-width: 768px){
-  .homeText{
-    font-size: large;
-  }
-  
-  .instagramLink{
-    font-size: large;
-  }
 }
 
+.instagramLink:hover {
+  color: #a42407;
+}
 
+@media (min-width: 768px) {
+  .homeText {
+    font-size: large;
+  }
+
+  .instagramLink {
+    font-size: large;
+  }
+
+  .announcementsBox {
+    width: 60%; 
+  }
+
+  .announcementsHeading {
+    font-size: 2rem;
+  }
+
+  .announcementItem {
+    font-size: 1.2rem;
+  }
+}
