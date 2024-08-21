@@ -17,7 +17,7 @@ export default function Order() {
       address: "1145 S De Anza Blvd, San Jose, CA 95129",
       mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=1145+S+De+Anza+Blvd+%2C+San+Jose%2C+CA+95129`,
       orderLink:
-        "https://demiyainc.square.site/?location=11ee09b7202ff20393a3ac1f6bbba828&customer_seat_id=11ee3cb9a5c1c9fca9dade2627b4fc9e",
+        "https://order.toasttab.com/online/demiya-de-anza-em-1145-south-de-anza-boulevard",
     },
     {
       name: "DUBLIN",
