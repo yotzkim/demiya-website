@@ -10,7 +10,7 @@ export default function Order() {
       address: "375 Saratoga Ave G, San Jose, CA 95129",
       mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=375+Saratoga+Ave+G%2C+San+Jose%2C+CA+95129`,
       orderLink:
-        "https://demiyainc.square.site/?location=11ee09b720ff009293a3ac1f6bbba828&customer_seat_id=11ee5cca1196d886ae73d230f2d6098d",
+        "https://order.toasttab.com/online/demiya-saratoga-ave-em-375-saratoga-ave-ste-g",
     },
     {
       name: "CUPERTINO",
