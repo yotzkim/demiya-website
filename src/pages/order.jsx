@@ -24,7 +24,7 @@ export default function Order() {
       address: "7477 Village Pkwy, Dublin, CA 94568",
       mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=7477+Village+Pkwy+%2C+Dublin+%2C+CA+94568`,
       orderLink:
-        "https://demiyainc.square.site/?location=11ee09b71fbfbab993a3ac1f6bbba828&customer_seat_id=11ee0bbf4a379d6cbbfe56e914396b31",
+        "https://order.toasttab.com/online/demiya-dublin-em-7477-village-parkway",
     },
     {
       name: "FREMONT",
