@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
-        <Image src='/images/logo.jpeg' alt='logo' width={50} height={50} />
+        <Image src='/images/logo.png' alt='logo' width={70} height={60} />
       </div>
       <ul className={styles.navLinks}>
         {navLinks.map((link, index) => (

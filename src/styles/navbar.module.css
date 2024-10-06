@@ -6,16 +6,15 @@
     padding: 1rem;
     background-color: white;
     border-bottom: 1px solid #787878;
+    height: 50px;
   }
   
   .logo {
     display: flex;
     align-items: center;
+    margin-left: -0.5rem;
   }
-  
-  .logo img {
-    height: 50px;
-  }
+
   
   .navLinks {
     display: flex;
