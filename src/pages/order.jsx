@@ -57,7 +57,7 @@ export default function Order() {
             <Link href={location.orderLink}>Online order</Link>
             {location.name === "FREMONT" && (
               <div className={styles.deliveryLinks}>
-                <Link className={styles.doorDash} href={location.doordashLink}>Doordash</Link>
+                <Link className={styles.doorDash} href={location.doordashLink}>DoorDash</Link>
                 <Link className={styles.uberEats} href={location.ubereatsLink}>UberEats</Link>
             </div>
             )}
