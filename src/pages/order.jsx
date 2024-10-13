@@ -31,6 +31,8 @@ export default function Order() {
       address: "46551 Mission Blvd, Fremont, CA 94539 (inside 99 Ranch)",
       mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=46551+Mission+Blvd+%2C+Fremont+%2C+CA+94539`,
       orderLink: "https://order.toasttab.com/online/demiya-fremont-em-46551-mission-boulevard",
+      doordashLink: "https://www.doordash.com/en-AU/store/demiya-fremont-31282911/?srsltid=AfmBOoqGA3GxBQ3uAlVvH1WXBnUvhIYMXvq2xrVhXcz_v9lXvlpX6rVo", 
+      ubereatsLink: "https://www.ubereats.com/store/demiya-fremont-em/aqjfiPLdQoCy7NTnFVmA9g?srsltid=AfmBOooFvn6RPgqYi5TQUlyTOsYwDoFeXrc89o5oMmIyBVDbymKniinu", 
     },
   ];
 
@@ -52,7 +54,13 @@ export default function Order() {
         {locations.map((location) => (
           <div key={location.address} className={styles.location}>
             <p className={styles.locationName}>{location.name}</p>
-              <Link href={location.orderLink}>Online order</Link>
+            <Link href={location.orderLink}>Online order</Link>
+            {location.name === "FREMONT" && (
+              <div className={styles.deliveryLinks}>
+                <Link className={styles.doorDash} href={location.doordashLink}>Doordash</Link>
+                <Link className={styles.uberEats} href={location.ubereatsLink}>UberEats</Link>
+            </div>
+            )}
             <p>{location.address}</p>
             <div className={styles.mapContainer}>
               <iframe

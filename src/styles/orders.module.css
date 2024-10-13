@@ -50,4 +50,14 @@
 }
 
 
+.deliveryLinks a {
+  margin-right: 15px; /* Add space between Doordash and UberEats links */
+}
 
+.doorDash{
+  color: #FF3008
+}
+
+.uberEats{
+  color: #3FC060
+}

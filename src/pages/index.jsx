@@ -6,7 +6,7 @@ import Head from 'next/head';
 
 export default function Home() {
   const announcements = [
-    { text: 'Our Fremont location is now open! Online orders are available under ', linkText: 'Orders/Locations', linkHref: '/order' },
+    { text: 'Uber Eats and DoorDash available now at our Fremont location under ', linkText: 'Orders/Locations', linkHref: '/order' },
     { text: 'All locations are now open on Wednesdays' }
   ];
 
