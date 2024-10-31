@@ -11,6 +11,7 @@ export default function Order() {
       mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=375+Saratoga+Ave+G%2C+San+Jose%2C+CA+95129`,
       orderLink:
         "https://order.toasttab.com/online/demiya-saratoga-ave-em-375-saratoga-ave-ste-g",
+      doordashLink: "https://www.doordash.com/store/demiya-san-jose-31449623",
     },
     {
       name: "CUPERTINO",
@@ -25,14 +26,18 @@ export default function Order() {
       mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=7477+Village+Pkwy+%2C+Dublin+%2C+CA+94568`,
       orderLink:
         "https://order.toasttab.com/online/demiya-dublin-em-7477-village-parkway",
+      doordashLink: "https://www.doordash.com/store/demiya-dublin-31449671",
     },
     {
       name: "FREMONT",
       address: "46551 Mission Blvd, Fremont, CA 94539 (inside 99 Ranch)",
       mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=46551+Mission+Blvd+%2C+Fremont+%2C+CA+94539`,
-      orderLink: "https://order.toasttab.com/online/demiya-fremont-em-46551-mission-boulevard",
-      doordashLink: "https://www.doordash.com/en-AU/store/demiya-fremont-31282911/?srsltid=AfmBOoqGA3GxBQ3uAlVvH1WXBnUvhIYMXvq2xrVhXcz_v9lXvlpX6rVo", 
-      ubereatsLink: "https://www.ubereats.com/store/demiya-fremont-em/aqjfiPLdQoCy7NTnFVmA9g?srsltid=AfmBOooFvn6RPgqYi5TQUlyTOsYwDoFeXrc89o5oMmIyBVDbymKniinu", 
+      orderLink:
+        "https://order.toasttab.com/online/demiya-fremont-em-46551-mission-boulevard",
+      doordashLink:
+        "https://www.doordash.com/en-AU/store/demiya-fremont-31282911/?srsltid=AfmBOoqGA3GxBQ3uAlVvH1WXBnUvhIYMXvq2xrVhXcz_v9lXvlpX6rVo",
+      ubereatsLink:
+        "https://www.ubereats.com/store/demiya-fremont-em/aqjfiPLdQoCy7NTnFVmA9g?srsltid=AfmBOooFvn6RPgqYi5TQUlyTOsYwDoFeXrc89o5oMmIyBVDbymKniinu",
     },
   ];
 
@@ -57,9 +62,21 @@ export default function Order() {
             <Link href={location.orderLink}>Online order</Link>
             {location.name === "FREMONT" && (
               <div className={styles.deliveryLinks}>
-                <Link className={styles.doorDash} href={location.doordashLink}>DoorDash</Link>
-                <Link className={styles.uberEats} href={location.ubereatsLink}>UberEats</Link>
-            </div>
+                <Link className={styles.doorDash} href={location.doordashLink}>
+                  DoorDash
+                </Link>
+                <Link className={styles.uberEats} href={location.ubereatsLink}>
+                  UberEats
+                </Link>
+              </div>
+            )}
+            {(location.name === "SARATOGA AVE" ||
+              location.name === "DUBLIN") && (
+              <div className={styles.saratogaDublinLinks}>
+                <Link className={styles.doorDash} href={location.doordashLink}>
+                  DoorDash
+                </Link>
+              </div>
             )}
             <p>{location.address}</p>
             <div className={styles.mapContainer}>
