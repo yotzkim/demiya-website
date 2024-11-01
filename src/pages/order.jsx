@@ -19,6 +19,7 @@ export default function Order() {
       mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=1145+S+De+Anza+Blvd+%2C+San+Jose%2C+CA+95129`,
       orderLink:
         "https://order.toasttab.com/online/demiya-de-anza-em-1145-south-de-anza-boulevard",
+      doordashLink: "https://www.doordash.com/store/demiya-san-jose-31449571/",
     },
     {
       name: "DUBLIN",
@@ -71,8 +72,8 @@ export default function Order() {
               </div>
             )}
             {(location.name === "SARATOGA AVE" ||
-              location.name === "DUBLIN") && (
-              <div className={styles.saratogaDublinLinks}>
+              location.name === "DUBLIN" || location.name === "CUPERTINO") && (
+              <div className={styles.doorDashLinks}>
                 <Link className={styles.doorDash} href={location.doordashLink}>
                   DoorDash
                 </Link>
