@@ -6,8 +6,12 @@ import Head from 'next/head';
 
 export default function Home() {
   const announcements = [
+    { text: 'New location at ',
+      boldText: 'The Public Market in Emeryville',
+      subText: ' coming soon!'
+    },
     { text: 'Uber Eats and DoorDash available now at our Fremont location under ', linkText: 'Orders/Locations', linkHref: '/order' },
-    { text: 'All locations are now open on Wednesdays' }
+    {text: 'All locations are now open on Wednesdays!'}
   ];
 
 
@@ -32,6 +36,10 @@ export default function Home() {
             {announcements.map((announcement, index) => (
               <li className={styles.announcementItem} key={index}>
               {announcement.text}
+              <span style={{fontWeight: 'bold'}}>
+              {announcement.boldText}
+              </span>
+              {announcement.subText}
               {announcement.linkText && (
                 <Link href={announcement.linkHref} className={styles.announcementLink}>
                   {announcement.linkText}
