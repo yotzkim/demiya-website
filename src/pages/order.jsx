@@ -6,6 +6,11 @@ import Head from "next/head";
 export default function Order() {
   const locations = [
     {
+      name: "EMERYVILLE",
+      address: "The Public Market 5959 Shellmound St, Emeryville, CA 94608",
+      mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=5959+Shellmound+St+%2C+Emeryville+%2C+CA+94608`,
+    },
+    {
       name: "SARATOGA AVE",
       address: "375 Saratoga Ave G, San Jose, CA 95129",
       mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=375+Saratoga+Ave+G%2C+San+Jose%2C+CA+95129`,
@@ -20,6 +25,8 @@ export default function Order() {
       orderLink:
         "https://order.toasttab.com/online/demiya-de-anza-em-1145-south-de-anza-boulevard",
       doordashLink: "https://www.doordash.com/store/demiya-san-jose-31449571/",
+      ubereatsLink:
+        "https://www.ubereats.com/store/demiya-de-anza-blvd/ArVjGu43T1yi8lU9regVYQ?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjE5ODAwJTIwVmFsbGNvJTIwUGt3eSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjMxMGQzMWFmLTBmOTEtOWUxMS1jNjNkLWQxZDRmMmQwMTIyOSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBMzcuMzI1MTQlMkMlMjJsb25naXR1ZGUlMjIlM0EtMTIyLjAxMTM4JTdE&ps=1",
     },
     {
       name: "DUBLIN",
@@ -56,41 +63,79 @@ export default function Order() {
         ></meta>
         <link rel="icon" href="/images/logo.jpeg"></link>
       </Head>
-      <div className={styles.orderText}>
-        {locations.map((location) => (
-          <div key={location.address} className={styles.location}>
-            <p className={styles.locationName}>{location.name}</p>
-            <Link href={location.orderLink}>Online order</Link>
-            {location.name === "FREMONT" && (
-              <div className={styles.deliveryLinks}>
-                <Link className={styles.doorDash} href={location.doordashLink}>
-                  DoorDash
-                </Link>
-                <Link className={styles.uberEats} href={location.ubereatsLink}>
-                  UberEats
-                </Link>
+      <div className={styles.centeredEmeryville}>
+        {locations
+          .filter((loc) => loc.name === "EMERYVILLE")
+          .map((location) => (
+            <div key={location.address} className={styles.location}>
+              <p className={styles.locationName}>
+                <span className={styles.newLabel}>NEW:</span>
+                {location.name}
+              </p>
+              <p>{location.address}</p>
+              <div className={styles.mapContainer}>
+                <iframe
+                  src={location.mapSrc}
+                  frameBorder="0"
+                  allowFullScreen
+                  title={location.name}
+                ></iframe>
               </div>
-            )}
-            {(location.name === "SARATOGA AVE" ||
-              location.name === "DUBLIN" || location.name === "CUPERTINO") && (
-              <div className={styles.doorDashLinks}>
-                <Link className={styles.doorDash} href={location.doordashLink}>
-                  DoorDash
-                </Link>
-              </div>
-            )}
-            <p>{location.address}</p>
-            <div className={styles.mapContainer}>
-              <iframe
-                src={location.mapSrc}
-                frameBorder="0"
-                allowFullScreen
-                title={location.name}
-              ></iframe>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
+
+      <div className={styles.orderText}>
+        {locations
+          .filter((loc) => loc.name !== "EMERYVILLE")
+          .map((location) => (
+            <div key={location.address} className={styles.location}>
+              <p className={styles.locationName}>{location.name}</p>
+              <Link href={location.orderLink}>Online order</Link>
+
+              {(location.name === "FREMONT" ||
+                location.name === "CUPERTINO") && (
+                <div className={styles.deliveryLinks}>
+                  <Link
+                    className={styles.doorDash}
+                    href={location.doordashLink}
+                  >
+                    DoorDash
+                  </Link>
+                  <Link
+                    className={styles.uberEats}
+                    href={location.ubereatsLink}
+                  >
+                    UberEats
+                  </Link>
+                </div>
+              )}
+
+              {(location.name === "SARATOGA AVE" ||
+                location.name === "DUBLIN") && (
+                <div className={styles.doorDashLinks}>
+                  <Link
+                    className={styles.doorDash}
+                    href={location.doordashLink}
+                  >
+                    DoorDash
+                  </Link>
+                </div>
+              )}
+
+              <p>{location.address}</p>
+              <div className={styles.mapContainer}>
+                <iframe
+                  src={location.mapSrc}
+                  frameBorder="0"
+                  allowFullScreen
+                  title={location.name}
+                ></iframe>
+              </div>
+            </div>
+          ))}
+      </div>
+
       <div className={styles.contact}>
         Customer Support: Only text messages are available at{" "}
         <strong>650-833-8775</strong>

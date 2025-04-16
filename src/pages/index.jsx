@@ -6,12 +6,12 @@ import Head from 'next/head';
 
 export default function Home() {
   const announcements = [
+    {text: 'You can now reserve tables at the Cuperitno / De Anza Blvd location through: ', linkText: 'OpenTable', linkHref: 'https://www.opentable.com/restref/client/?restref=1412428&lang=en-US&ot_source=Restaurant%20website&corrid=2c03b971-05d1-47df-92a2-98eaf21cbd6b'},
     { text: 'New location at ',
       boldText: 'The Public Market in Emeryville',
       subText: ' coming soon!'
     },
-    { text: 'Uber Eats and DoorDash available now at our Fremont location under ', linkText: 'Orders/Locations', linkHref: '/order' },
-    {text: 'All locations are now open on Wednesdays!'}
+
   ];
 
 
@@ -31,7 +31,6 @@ export default function Home() {
       </Head>
       <div className={styles.container}>
         <div className={styles.announcementsBox}>
-          <h2 className={styles.announcementsHeading}>Announcements</h2>
           <ul className={styles.announcementList}>
             {announcements.map((announcement, index) => (
               <li className={styles.announcementItem} key={index}>

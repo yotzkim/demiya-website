@@ -5,6 +5,14 @@ import Head from "next/head";
 
 export default function Hours() {
   const hoursData = {
+    emeryville: {
+      title: "NEW: Emeryville Hours",
+      hours: [
+        { day: "Monday", time: "Closed" },
+        { day: "Tues-Sat", time: "11:30am-8:00pm" },
+        { day: "Sunday", time: "11:30am-7:30pm" },
+      ],
+    },
     saratoga: {
       title: "Saratoga Hours",
       hours: [
