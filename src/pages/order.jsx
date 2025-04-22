@@ -9,6 +9,8 @@ export default function Order() {
       name: "EMERYVILLE",
       address: "The Public Market 5959 Shellmound St, Emeryville, CA 94608",
       mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=5959+Shellmound+St+%2C+Emeryville+%2C+CA+94608`,
+      orderLink:
+      "https://order.toasttab.com/online/demiya-emeryville-5959-shellmound-street"
     },
     {
       name: "SARATOGA AVE",
@@ -72,6 +74,7 @@ export default function Order() {
                 <span className={styles.newLabel}>NEW:</span>
                 {location.name}
               </p>
+              <Link href={location.orderLink} className={styles.orderLink}>Online order</Link>
               <p>{location.address}</p>
               <div className={styles.mapContainer}>
                 <iframe
