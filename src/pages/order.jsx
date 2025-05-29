@@ -141,7 +141,7 @@ export default function Order() {
 
       <div className={styles.contact}>
         Customer Support: Only text messages are available at{" "}
-        <strong>650-833-8775</strong>
+        <strong>408-877-7883</strong>
       </div>
       <div className={styles.spacer}></div>
     </Layout>
