@@ -53,105 +53,104 @@ export default function Order() {
     },
   ];
 
-  return (
-    <Layout>
-      <Head>
-        <title>Demiya Online Order</title>
-        <meta
-          name="description"
-          content="Official website for Demiya restaurant. Order online here!"
-        ></meta>
-        <meta
-          name="keywords"
-          content="Demiya, Japanese Restaurant, Japanese Curry, Katsu, Cupertino, Dublin, San Jose, Saratoga"
-        ></meta>
-        <link rel="icon" href="/images/logo.jpeg"></link>
-      </Head>
-      <div className={styles.centeredEmeryville}>
-        {locations
-          .filter((loc) => loc.name === "EMERYVILLE")
-          .map((location) => (
-            <div key={location.address} className={styles.location}>
-              <p className={styles.locationName}>
-                <span className={styles.newLabel}>NEW:</span>
-                {location.name}
-              </p>
-              <Link href={location.orderLink} className={styles.orderLink}>
-                Online order
-              </Link>
-              <Link className={styles.doorDash} href={location.doordashLink}>
-                DoorDash
-              </Link>
-              <p>{location.address}</p>
-              <div className={styles.mapContainer}>
-                <iframe
-                  src={location.mapSrc}
-                  frameBorder="0"
-                  allowFullScreen
-                  title={location.name}
-                ></iframe>
-              </div>
+return (
+  <Layout>
+    <Head>
+      <title>Demiya Online Order</title>
+      <meta
+        name="description"
+        content="Official website for Demiya restaurant. Order online here!"
+      ></meta>
+      <meta
+        name="keywords"
+        content="Demiya, Japanese Restaurant, Japanese Curry, Katsu, Cupertino, Dublin, San Jose, Saratoga"
+      ></meta>
+      <link rel="icon" href="/images/logo.jpeg"></link>
+    </Head>
+    <div className={styles.centeredEmeryville}>
+      {locations
+        .filter((loc) => loc.name === "EMERYVILLE")
+        .map((location) => (
+          <div key={location.address} className={styles.location}>
+            <p className={styles.locationName}>
+              <span className={styles.newLabel}>NEW:</span>
+              {location.name}
+            </p>
+            <Link href={location.orderLink} className={styles.orderLink}>
+              Online order
+            </Link>
+            {/* <Link className={styles.doorDash} href={location.doordashLink}>
+              DoorDash
+            </Link> */}
+            <p>{location.address}</p>
+            <div className={styles.mapContainer}>
+              <iframe
+                src={location.mapSrc}
+                frameBorder="0"
+                allowFullScreen
+                title={location.name}
+              ></iframe>
             </div>
-          ))}
-      </div>
+          </div>
+        ))}
+    </div>
 
-      <div className={styles.orderText}>
-        {locations
-          .filter((loc) => loc.name !== "EMERYVILLE")
-          .map((location) => (
-            <div key={location.address} className={styles.location}>
-              <p className={styles.locationName}>{location.name}</p>
-              <Link href={location.orderLink}>Online order</Link>
+    <div className={styles.orderText}>
+      {locations
+        .filter((loc) => loc.name !== "EMERYVILLE")
+        .map((location) => (
+          <div key={location.address} className={styles.location}>
+            <p className={styles.locationName}>{location.name}</p>
+            <Link href={location.orderLink}>Online order</Link>
 
-              {(location.name === "FREMONT" ||
-                location.name === "CUPERTINO") && (
-                <div className={styles.deliveryLinks}>
-                  <Link
-                    className={styles.doorDash}
-                    href={location.doordashLink}
-                  >
-                    DoorDash
-                  </Link>
-                  <Link
-                    className={styles.uberEats}
-                    href={location.ubereatsLink}
-                  >
-                    UberEats
-                  </Link>
-                </div>
-              )}
-
-              {(location.name === "SARATOGA AVE" ||
-                location.name === "DUBLIN") && (
-                <div className={styles.doorDashLinks}>
-                  <Link
-                    className={styles.doorDash}
-                    href={location.doordashLink}
-                  >
-                    DoorDash
-                  </Link>
-                </div>
-              )}
-
-              <p>{location.address}</p>
-
-              <div className={styles.mapContainer}>
-                <iframe
-                  src={location.mapSrc}
-                  frameBorder="0"
-                  allowFullScreen
-                  title={location.name}
-                ></iframe>
+            {/* {(location.name === "FREMONT" || location.name === "CUPERTINO") && (
+              <div className={styles.deliveryLinks}>
+                <Link
+                  className={styles.doorDash}
+                  href={location.doordashLink}
+                >
+                  DoorDash
+                </Link>
+                <Link
+                  className={styles.uberEats}
+                  href={location.ubereatsLink}
+                >
+                  UberEats
+                </Link>
               </div>
-            </div>
-          ))}
-      </div>
+            )}
 
-      <div className={styles.contact}>
-        Customer Support: Only text messages are available at{" "}
-        <strong>408-877-7883</strong>
-      </div>
-      <div className={styles.spacer}></div>
-    </Layout>
-  );
+            {(location.name === "SARATOGA AVE" ||
+              location.name === "DUBLIN") && (
+              <div className={styles.doorDashLinks}>
+                <Link
+                  className={styles.doorDash}
+                  href={location.doordashLink}
+                >
+                  DoorDash
+                </Link>
+              </div>
+            )} */}
+
+            <p>{location.address}</p>
+
+            <div className={styles.mapContainer}>
+              <iframe
+                src={location.mapSrc}
+                frameBorder="0"
+                allowFullScreen
+                title={location.name}
+              ></iframe>
+            </div>
+          </div>
+        ))}
+    </div>
+
+    <div className={styles.contact}>
+      Customer Support: Only text messages are available at{" "}
+      <strong>408-877-7883</strong>
+    </div>
+    <div className={styles.spacer}></div>
+  </Layout>
+);
 }
