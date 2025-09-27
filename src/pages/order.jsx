@@ -6,15 +6,6 @@ import Head from "next/head";
 export default function Order() {
   const locations = [
     {
-      name: "EMERYVILLE",
-      address: "The Public Market 5959 Shellmound St, Emeryville, CA 94608",
-      mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=5959+Shellmound+St+%2C+Emeryville+%2C+CA+94608`,
-      orderLink:
-        "https://order.toasttab.com/online/demiya-emeryville-5959-shellmound-street",
-      doordashLink:
-        "https://www.doordash.com/store/demiya-emeryville-34161895/66912947/",
-    },
-    {
       name: "SARATOGA AVE",
       address: "375 Saratoga Ave G, San Jose, CA 95129",
       mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=375+Saratoga+Ave+G%2C+San+Jose%2C+CA+95129`,
@@ -51,59 +42,40 @@ export default function Order() {
       ubereatsLink:
         "https://www.ubereats.com/store/demiya-fremont-em/aqjfiPLdQoCy7NTnFVmA9g?srsltid=AfmBOooFvn6RPgqYi5TQUlyTOsYwDoFeXrc89o5oMmIyBVDbymKniinu",
     },
+    {
+      name: "EMERYVILLE",
+      address: "The Public Market 5959 Shellmound St, Emeryville, CA 94608",
+      mapSrc: `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=5959+Shellmound+St+%2C+Emeryville+%2C+CA+94608`,
+      orderLink:
+        "https://order.toasttab.com/online/demiya-emeryville-5959-shellmound-street",
+      doordashLink:
+        "https://www.doordash.com/store/demiya-emeryville-34161895/66912947/",
+    },
   ];
 
-return (
-  <Layout>
-    <Head>
-      <title>Demiya Online Order</title>
-      <meta
-        name="description"
-        content="Official website for Demiya restaurant. Order online here!"
-      ></meta>
-      <meta
-        name="keywords"
-        content="Demiya, Japanese Restaurant, Japanese Curry, Katsu, Cupertino, Dublin, San Jose, Saratoga"
-      ></meta>
-      <link rel="icon" href="/images/logo.jpeg"></link>
-    </Head>
-    <div className={styles.centeredEmeryville}>
-      {locations
-        .filter((loc) => loc.name === "EMERYVILLE")
-        .map((location) => (
-          <div key={location.address} className={styles.location}>
-            <p className={styles.locationName}>
-              <span className={styles.newLabel}>NEW:</span>
-              {location.name}
-            </p>
-            <Link href={location.orderLink} className={styles.orderLink}>
-              Online order
-            </Link>
-            {/* <Link className={styles.doorDash} href={location.doordashLink}>
-              DoorDash
-            </Link> */}
-            <p>{location.address}</p>
-            <div className={styles.mapContainer}>
-              <iframe
-                src={location.mapSrc}
-                frameBorder="0"
-                allowFullScreen
-                title={location.name}
-              ></iframe>
-            </div>
-          </div>
-        ))}
-    </div>
+  return (
+    <Layout>
+      <Head>
+        <title>Demiya Online Order</title>
+        <meta
+          name="description"
+          content="Official website for Demiya restaurant. Order online here!"
+        ></meta>
+        <meta
+          name="keywords"
+          content="Demiya, Japanese Restaurant, Japanese Curry, Katsu, Cupertino, Dublin, San Jose, Saratoga"
+        ></meta>
+        <link rel="icon" href="/images/logo.jpeg"></link>
+      </Head>
 
-    <div className={styles.orderText}>
-      {locations
-        .filter((loc) => loc.name !== "EMERYVILLE")
-        .map((location) => (
-          <div key={location.address} className={styles.location}>
-            <p className={styles.locationName}>{location.name}</p>
-            <Link href={location.orderLink}>Online order</Link>
+      <div className={styles.orderText}>
+        {locations
+          .map((location) => (
+            <div key={location.address} className={styles.location}>
+              <p className={styles.locationName}>{location.name}</p>
+              <Link href={location.orderLink}>Online order</Link>
 
-            {/* {(location.name === "FREMONT" || location.name === "CUPERTINO") && (
+              {/* {(location.name === "FREMONT" || location.name === "CUPERTINO") && (
               <div className={styles.deliveryLinks}>
                 <Link
                   className={styles.doorDash}
@@ -132,25 +104,25 @@ return (
               </div>
             )} */}
 
-            <p>{location.address}</p>
+              <p>{location.address}</p>
 
-            <div className={styles.mapContainer}>
-              <iframe
-                src={location.mapSrc}
-                frameBorder="0"
-                allowFullScreen
-                title={location.name}
-              ></iframe>
+              <div className={styles.mapContainer}>
+                <iframe
+                  src={location.mapSrc}
+                  frameBorder="0"
+                  allowFullScreen
+                  title={location.name}
+                ></iframe>
+              </div>
             </div>
-          </div>
-        ))}
-    </div>
+          ))}
+      </div>
 
-    <div className={styles.contact}>
-      Customer Support: Only text messages are available at{" "}
-      <strong>408-877-7883</strong>
-    </div>
-    <div className={styles.spacer}></div>
-  </Layout>
-);
+      <div className={styles.contact}>
+        Customer Support: Only text messages are available at{" "}
+        <strong>408-877-7883</strong>
+      </div>
+      <div className={styles.spacer}></div>
+    </Layout>
+  );
 }

@@ -5,14 +5,9 @@ import Layout from '../components/layout.jsx';
 import Head from 'next/head';
 
 export default function Home() {
-  const announcements = [
-    {text: 'You can now reserve tables at the Cuperitno / De Anza Blvd location through: ', linkText: 'OpenTable', linkHref: 'https://www.opentable.com/restref/client/?restref=1412428&lang=en-US&ot_source=Restaurant%20website&corrid=2c03b971-05d1-47df-92a2-98eaf21cbd6b'},
-    { text: 'New location at ',
-      boldText: 'The Public Market in Emeryville',
-      subText: ' is open!'
-    },
-
-  ];
+  
+  // Add announcements here
+  const announcements = [];
 
 
   return (
@@ -30,7 +25,9 @@ export default function Home() {
         <link rel="icon" href="/images/logo.jpeg" />
       </Head>
       <div className={styles.container}>
-        <div className={styles.announcementsBox}>
+
+        {/* // Uncomment below to enable announcements */}
+        {/* <div className={styles.announcementsBox}>
           <ul className={styles.announcementList}>
             {announcements.map((announcement, index) => (
               <li className={styles.announcementItem} key={index}>
@@ -47,12 +44,13 @@ export default function Home() {
             </li>
             ))}
           </ul>
-        </div>
+        </div> */}
         <div className={styles.homeText}>
           <span>The most up-to-date information is available on Instagram at </span>
           <Link className={styles.instagramLink} href="https://www.instagram.com/demiya_inc/">
             demiya_inc
           </Link>
+          !
         </div>
         <div className={styles.imageContainer}>
           <Image

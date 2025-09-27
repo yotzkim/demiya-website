@@ -5,16 +5,8 @@ import Head from "next/head";
 
 export default function Hours() {
   const hoursData = {
-    emeryville: {
-      title: "NEW: Emeryville Hours",
-      hours: [
-        { day: "Monday", time: "Closed" },
-        { day: "Tues-Sat", time: "11:30am-8:00pm" },
-        { day: "Sunday", time: "11:30am-7:30pm" },
-      ],
-    },
     saratoga: {
-      title: "Saratoga Hours",
+      title: "Saratoga Ave Hours",
       hours: [
         { day: "Monday", time: "Closed" },
         { day: "Tues-Thurs", time: "11:30am-1:00pm; 5:30pm-8:00pm" },
@@ -24,7 +16,7 @@ export default function Hours() {
       ],
     },
     deAnza: {
-      title: "De Anza Hours",
+      title: "Cupertino Hours",
       hours: [
         { day: "Monday", time: "Closed" },
         { day: "Tues-Thurs", time: "11:30am-1:00pm; 5:30pm-8:00pm" },
@@ -52,6 +44,14 @@ export default function Hours() {
         { day: "Sunday", time: "11:30am-7:30pm" },
       ],
     },
+    emeryville: {
+      title: "Emeryville Hours",
+      hours: [
+        { day: "Monday", time: "Closed" },
+        { day: "Tues-Sat", time: "11:30am-8:00pm" },
+        { day: "Sunday", time: "11:30am-7:30pm" },
+      ],
+    }
   };
 
   return (
