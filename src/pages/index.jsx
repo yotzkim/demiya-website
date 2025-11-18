@@ -1,14 +1,17 @@
-import Link from 'next/link';
-import styles from '../styles/home.module.css';
-import Image from 'next/image';
-import Layout from '../components/layout.jsx';
-import Head from 'next/head';
+import Link from "next/link";
+import styles from "../styles/home.module.css";
+import Image from "next/image";
+import Layout from "../components/layout.jsx";
+import Head from "next/head";
 
 export default function Home() {
-  
   // Add announcements here
-  const announcements = [];
-
+  const announcements = [
+    {
+      boldText: "Palo Alto location",
+      text: " coming soon!"
+    },
+  ];
 
   return (
     <Layout>
@@ -25,29 +28,36 @@ export default function Home() {
         <link rel="icon" href="/images/logo.jpeg" />
       </Head>
       <div className={styles.container}>
-
         {/* // Uncomment below to enable announcements */}
-        {/* <div className={styles.announcementsBox}>
+        <div className={styles.announcementsBox}>
           <ul className={styles.announcementList}>
             {announcements.map((announcement, index) => (
               <li className={styles.announcementItem} key={index}>
-              {announcement.text}
-              <span style={{fontWeight: 'bold'}}>
-              {announcement.boldText}
-              </span>
-              {announcement.subText}
-              {announcement.linkText && (
-                <Link href={announcement.linkHref} className={styles.announcementLink}>
-                  {announcement.linkText}
-                </Link>
-              )}
-            </li>
+                <span style={{ fontWeight: "bold" }}>
+                  {announcement.boldText}
+                </span>
+                {announcement.text}
+                {announcement.subText}
+                {announcement.linkText && (
+                  <Link
+                    href={announcement.linkHref}
+                    className={styles.announcementLink}
+                  >
+                    {announcement.linkText}
+                  </Link>
+                )}
+              </li>
             ))}
           </ul>
-        </div> */}
+        </div>
         <div className={styles.homeText}>
-          <span>The most up-to-date information is available on Instagram at </span>
-          <Link className={styles.instagramLink} href="https://www.instagram.com/demiya_inc/">
+          <span>
+            The most up-to-date information is available on Instagram at{" "}
+          </span>
+          <Link
+            className={styles.instagramLink}
+            href="https://www.instagram.com/demiya_inc/"
+          >
             demiya_inc
           </Link>
           !
@@ -58,7 +68,7 @@ export default function Home() {
             alt="Hamburg Curry"
             width={800}
             height={450}
-            style={{ width: '70%', height: 'auto' }}
+            style={{ width: "70%", height: "auto" }}
             priority
           />
         </div>
