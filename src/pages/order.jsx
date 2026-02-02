@@ -118,10 +118,10 @@ export default function Order() {
           ))}
       </div>
 
-      {/* <div className={styles.contact}>
-        Customer Support: Only text messages are available at{" "}
-        <strong></strong>
-      </div> */}
+      <div className={styles.contact}>
+        Customer Support: Text messages only at{" "}
+        <strong>+1 (408) 499-1250</strong>
+      </div>
       <div className={styles.spacer}></div>
     </Layout>
   );
